@@ -36,15 +36,15 @@ public class BaseClass {
 	}
 	
 	}
-	public void InstantiateDriver(String browserType) throws IOException {
+	public void InstantiateDriver(WebDriver driver) throws IOException {
 		// WebDriverManager.chromedriver().setup();
 		//String browser = prop.getProperty("browser");
 
-		if (browserType.trim().equalsIgnoreCase("Chrome")) {
+		if (driver.trim().equalsIgnoreCase("Chrome")) {
 			driver = new ChromeDriver();
-		} else if (browserType.trim().equalsIgnoreCase("FireFox")) {
+		} else if (driver.trim().equalsIgnoreCase("FireFox")) {
 			driver = new FirefoxDriver();
-		} else if (browserType.trim().equalsIgnoreCase("Edge")) {
+		} else if (driver.trim().equalsIgnoreCase("Edge")) {
 			driver = new EdgeDriver();
 
 		} else {
